@@ -1,11 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Nusa Tenggara</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?nusa-tenggara');
+            height: 60vh;
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 50px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .faq {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .testimonials {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+        .navbar {
+            transition: background-color 0.3s, box-shadow 0.3s;
+            background-color: transparent; /* Navbar transparan saat awal */
+        }
+        .navbar.scrolled {
+            background-color: rgba(0, 123, 255, 0.9); /* Warna navbar saat di-scroll */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+        }
+        .toggle-icon {
+            transition: transform 0.3s;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .collapsed .toggle-icon {
+            transform: rotate(90deg); /* Rotasi panah saat collapsed */
+        }
+    </style>
 </head>
 <body>
-  <h1>helllo</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <h1 class="text-white">Wisata Nusa Tenggara</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Destinasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Jelajahi Keindahan Nusa Tenggara</h1>
+        <p>Temukan pesona alam dan budaya yang menakjubkan.</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2>Destinasi Populer</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?komodo" class="card-img-top" alt="Pulau Komodo ">
+                <div class="card-body">
+                    <h5 class="card-title">Pulau Komodo</h5>
+                    <p class="card-text">Rumah bagi kadal terbesar di dunia, Pulau Komodo menawarkan pemandangan yang menakjubkan.</p>
+                    <a href="#" class="btn btn-custom">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?labuan-bajo" class="card-img-top" alt="Labuan Bajo">
+                <div class="card-body">
+                    <h5 class="card-title">Labuan Bajo</h5>
+                    <p class="card-text">Pintu gerbang menuju Taman Nasional Komodo, terkenal dengan pemandangan matahari terbenamnya.</p>
+                    <a href="#" class="btn btn-custom">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?gili" class="card-img-top" alt="Gili Islands">
+                <div class="card-body">
+                    <h5 class="card-title">Gili Islands</h5>
+                    <p class="card-text">Tiga pulau kecil yang terkenal dengan pantai berpasir putih dan air jernih.</p>
+                    <a href="#" class="btn btn-custom">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2>Berita dan Promosi</h2>
+    <div class="alert alert-info">
+        <strong>Promo Spesial!</strong> Dapatkan diskon 20% untuk paket wisata ke Pulau Komodo selama bulan ini. Hubungi kami untuk informasi lebih lanjut!
+    </div>
+    <div class="alert alert-info">
+        <strong>Berita Terbaru!</strong> Festival Budaya Nusa Tenggara akan diadakan pada bulan depan. Jangan lewatkan kesempatan untuk merasakan keunikan budaya lokal!
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2>Testimoni Pengunjung</h2>
+    <div class="testimonials">
+        <p>"Pengalaman yang luar biasa! Nusa Tenggara memiliki keindahan alam yang menakjubkan." - Andi</p>
+        <p>"Saya sangat menikmati perjalanan saya ke Labuan Bajo. Pemandangannya luar biasa!" - Siti</p>
+        <p>"Gili Islands adalah surga tersembunyi. Saya pasti akan kembali!" - Budi</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2>FAQ (Pertanyaan yang Sering Diajukan)</h2>
+    <div class="faq">
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1. Apa waktu terbaik untuk mengunjungi Nusa Tenggara?
+                            <span class="toggle-icon">▶</span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Waktu terbaik untuk mengunjungi Nusa Tenggara adalah antara April hingga Oktober, saat cuaca cenderung kering.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. Apakah ada transportasi umum di Nusa Tenggara?
+                            <span class="toggle-icon">▶</span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Ya, ada beberapa pilihan transportasi umum seperti bus dan ojek, namun sewa mobil atau motor lebih disarankan untuk menjelajahi daerah.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3. Apakah aman untuk berwisata di Nusa Tenggara?
+                            <span class="toggle-icon">▶</span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Secara umum, Nusa Tenggara adalah tempat yang aman untuk wisatawan, tetapi tetap disarankan untuk berhati-hati dan menjaga barang berharga Anda.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2>Artikel Terbaru</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?food" class="card-img-top" alt="Makanan Nusa Tenggara">
+                <div class="card-body">
+                    <h5 class="card-title">Makanan Khas Nusa Tenggara</h5>
+                    <p class="card-text">Jelajahi berbagai hidangan lezat yang ditawarkan oleh Nusa Tenggara.</p>
+                    <a href="#" class="btn btn-custom">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?culture" class="card-img-top" alt="Budaya Nusa Tenggara">
+                <div class="card-body">
+                    <h5 class="card-title">Budaya dan Tradisi</h5>
+                    <p class="card-text">Pelajari lebih lanjut tentang budaya dan tradisi unik di Nusa Tenggara.</p>
+                    <a href="#" class="btn btn-custom">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?adventure" class="card-img-top" alt="Petualangan di Nusa Tenggara">
+                <div class="card-body">
+                    <h5 class="card-title">Petualangan Seru</h5>
+                    <p class="card-text">Temukan aktivitas petualangan yang bisa Anda lakukan di Nusa Tenggara.</p>
+                    <a href="#" class="btn btn-custom">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary text-center text-white p-3">
+    <p>&copy; 2023 Wisata Nusa Tenggara. Semua hak dilindungi.</p>
+    <div>
+        <a href="#" class="text-white">Facebook</a> | <a href="#" class="text-white">Instagram</a> | <a href="#" class="text-white">Twitter</a>
+    </div>
+</footer>
+
+<button class="back-to-top btn btn-custom">Back to Top</button>
+
+<script>
+    const backToTopButton = document.querySelector('.back-to-top');
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            backToTopButton.style.display = 'block';
+            navbar.classList.add('scrolled');
+        } else {
+            backToTopButton.style.display = 'none';
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    const toggleButtons = document.querySelectorAll('.btn-link');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.getAttribute('data-target');
+            const collapseElement = document.querySelector(target);
+            collapseElement.classList.toggle('show');
+            button.classList.toggle('collapsed');
+        });
+    });
+</script>
 </body>
 </html>
