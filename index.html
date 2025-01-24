@@ -10,8 +10,8 @@
             font-family: Arial, sans-serif;
         }
         .hero {
-            background-image: url('https://source.unsplash.com/1600x900/?nusa-tenggara');
-            height: 60vh;
+            background-image: url('img/banner.png');
+            height: 100vh;
             background-size: cover;
             color: white;
             display: flex;
@@ -59,7 +59,7 @@
             background-color: transparent; /* Navbar transparan saat awal */
         }
         .navbar.scrolled {
-            background-color: rgba(0, 123, 255, 0.9); /* Warna navbar saat di-scroll */
+            background-color: rgba(81, 151, 224, 0.9); /* Warna navbar saat di-scroll */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
         }
         .toggle-icon {
@@ -70,6 +70,11 @@
         .collapsed .toggle-icon {
             transform: rotate(90deg); /* Rotasi panah saat collapsed */
         }
+        .card-img-custom {
+            aspect-ratio: 16 / 9; /* Rasio gambar 16:9 */
+            width: 100%;
+            object-fit: cover;
+}
     </style>
 </head>
 <body>
@@ -77,9 +82,9 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><img src="img/logo-removebg-preview.png" alt=""></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <h1 class="text-white">Pesona Nusa Tenggara</h1>
+        <h1 class="text-white"><img src="img/logo-removebg-preview.png" alt="" style="height: 50px;"></h1>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
@@ -104,7 +109,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img src="img/pulaukomodo.png" class="card-img-top" alt="Pulau Komodo ">
+                <img src="img/pulaukomodo.png" class="card-img-top " alt="Pulau Komodo ">
                 <div class="card-body">
                     <h5 class="card-title">Pulau Komodo</h5>
                     <p class="card-text">Rumah bagi kadal terbesar di dunia, Pulau Komodo menawarkan pemandangan yang menakjubkan.</p>
@@ -127,7 +132,7 @@
                 <img src="img/pulaugili.png" class="card-img-top" alt="Gili Islands">
                 <div class="card-body">
                     <h5 class="card-title">Gili Islands</h5>
-                    <p class="card-text">Tiga pulau kecil yang terkenal dengan pantai berpasir putih dan air jernih.</p>
+                    <p class="card-text">Tiga pulau kecil yang terkenal dengan pantai berpasir putih dan air jernih.</p><br>
                     <a href="#" class="btn btn-custom">Selengkapnya</a>
                 </div>
             </div>
@@ -212,7 +217,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img src="img/makanan.png" class="card-img-top" alt="Makanan Nusa Tenggara">
+                <img src="img/makanan.png" class="card-img-top card-img-custom" alt="Makanan Nusa Tenggara">
                 <div class="card-body">
                     <h5 class="card-title">Makanan Khas Nusa Tenggara</h5>
                     <p class="card-text">Jelajahi berbagai hidangan lezat yang ditawarkan oleh Nusa Tenggara.</p>
@@ -222,7 +227,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="img/tradisi.png" class="card-img-top" alt="Budaya Nusa Tenggara">
+                <img src="img/tradisi.png" class="card-img-top card-img-custom" alt="Budaya Nusa Tenggara">
                 <div class="card-body">
                     <h5 class="card-title">Budaya dan Tradisi</h5>
                     <p class="card-text">Pelajari lebih lanjut tentang budaya dan tradisi unik di Nusa Tenggara.</p>
@@ -232,7 +237,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="img/alam.png" class="card-img-top" alt="Petualangan di Nusa Tenggara">
+                <img src="img/alam.png" class="card-img-top card-img-custom" alt="Petualangan di Nusa Tenggara">
                 <div class="card-body">
                     <h5 class="card-title">Petualangan Seru</h5>
                     <p class="card-text">Temukan aktivitas petualangan yang bisa Anda lakukan di Nusa Tenggara.</p>
